@@ -13,14 +13,21 @@
     />
   </head>
   <body>
-    <form class="search-form" id="search-form">
-      <input type="text" name="query" autocomplete="off" placeholder="Search images..." />
-    </form>
-    <ul class="gallery">
-      <!-- Список <li> с карточками изображений -->
-    </ul>
-    <button id="load-more-btn" class="load-more-button hidden" type="button">Load more</button>
-
+    <div class="container">
+      <form class="search-form" id="search-form">
+        <input
+          class="search-input"
+          type="text"
+          name="query"
+          autocomplete="off"
+          placeholder="Search images..."
+        />
+      </form>
+      <ul class="gallery">
+        <!-- Список <li> с карточками изображений -->
+      </ul>
+      <button id="load-more-btn" class="load-more-button hidden" type="button">Load more</button>
+    </div>
     <script src="./index.js"></script>
   </body>
 </html>
