@@ -25,7 +25,7 @@ function loadMore() {
   page++;
   const lastPicture = pictures[pictures.length - 1];
   loadPictures();
-  setTimeout(() => scrollToPicture(lastPicture.id), 100);
+  setTimeout(() => scrollToPicture(lastPicture.id), 500);
 }
 
 function picCard(pictures) {
@@ -52,9 +52,13 @@ function scrollToPicture(lastPictureId) {
   const lastPicture = document.getElementById(`picture-${lastPictureId}`);
   const nextPicture = lastPicture.nextElementSibling;
   if (nextPicture) {
-    nextPicture.scrollIntoView({
+    window.scrollTo({
+      top: document.documentElement.offsetHeight,
       behavior: 'smooth',
-      block: 'end',
     });
+    // nextPicture.scrollIntoView({
+    //   behavior: 'smooth',
+    //   block: 'start',
+    // });
   }
 }
