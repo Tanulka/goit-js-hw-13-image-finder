@@ -52,13 +52,9 @@ function scrollToPicture(lastPictureId) {
   const lastPicture = document.getElementById(`picture-${lastPictureId}`);
   const nextPicture = lastPicture.nextElementSibling;
   if (nextPicture) {
-    window.scrollTo({
-      top: document.documentElement.offsetHeight,
+    nextPicture.scrollIntoView({
       behavior: 'smooth',
+      block: 'start',
     });
-    // nextPicture.scrollIntoView({
-    //   behavior: 'smooth',
-    //   block: 'start',
-    // });
   }
 }
