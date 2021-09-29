@@ -3,6 +3,7 @@ import './sass/main.scss';
 import refs from './js/refs';
 import imageCard from './templates/imageCard.hbs';
 import { fetchFindPictures } from './js/apiService';
+import './js/scroll-to-top';
 
 const { searchForm, galleryList, btnLoadMore } = refs;
 
