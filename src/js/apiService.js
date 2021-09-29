@@ -9,6 +9,8 @@ export async function fetchFindPictures(picName, page = 1, per_page = 12) {
     url.searchParams.set('image_type', 'photo');
     url.searchParams.set('per_page', per_page);
     url.searchParams.set('page', page);
+    url.searchParams.set('orientation', 'horizontal');
+
     const response = await fetch(url.toString());
     const { hits } = await response.json();
     return hits;
